@@ -1,4 +1,4 @@
-## Deniel of Service [metasploit]
+## Deniel of Service Attack [metasploit]
 
 <img src="https://www.kali.org/tools/metasploit-framework/images/metasploit-framework-logo.svg" style="width:120px;"/>
 
