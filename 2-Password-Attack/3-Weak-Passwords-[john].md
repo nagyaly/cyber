@@ -1,4 +1,4 @@
-# Password Recovery [hashcat]
+# Password Recovery [John the Ripper]
 <img src="https://www.kali.org/tools/john/images/john-logo.svg" style="width:120px;"/>
 
 John the Ripper is a tool designed to help systems administrators to find weak (easy to guess or crack through brute force) passwords, and even automatically mail users warning them about it, if it is desired.
