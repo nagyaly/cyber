@@ -29,6 +29,8 @@ nagy:$y$j9T$55/6AvAszIb50QynSpUfM0$F2fosqL1KLOyyTqceeasliCVNR9tlvnROXF5KzgfJR9:1
 
 ### 2- Crack the weak password
 `john --wordlist=wordlist.txt unshadow.txt`
+
+assuming you generated a wordlist using crunch.
 ```
 Using default input encoding: UTF-8
 No password hashes loaded (see FAQ)
@@ -51,4 +53,4 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
 ```
 
-as we can see, we retreived the weak password of the user `nagy` which is `nagy`
+as we can see, we retreived the weak password of the user `nagy` which is also `nagy`
