@@ -31,3 +31,4 @@ note: if you want to add space to the character set, you must use the `\` escape
 - ^ will insert symbols
 
 ---
+> For more questions email: nagy@aast.edu

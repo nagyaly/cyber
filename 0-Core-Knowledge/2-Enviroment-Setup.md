@@ -40,3 +40,8 @@ Alert: All links will start the download once you click
 - Add the ISO file to the removable IDE
 - Configure the network to bridged (select en0 interface)
 - Boot and install Windows 7
+
+
+
+---
+> For more questions email: nagy@aast.edu

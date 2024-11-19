@@ -48,3 +48,7 @@ View the full module info with the info, or info -d command.
 
 [*] SYN flooding 192.168.70.6:139...
 ```
+
+
+---
+> For more questions email: nagy@aast.edu

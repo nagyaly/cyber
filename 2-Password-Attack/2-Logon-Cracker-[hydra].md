@@ -52,3 +52,6 @@ We have to enable the ssh wide compatability mode in kali:
 - go down with keys and tick `SSH Client` by pressing the space bar, then select apply.
 - in terminal type `sudo systemctl restart sshd` 
 - run the Hydra attack, should work now
+
+---
+> For more questions email: nagy@aast.edu

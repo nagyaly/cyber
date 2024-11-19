@@ -54,3 +54,6 @@ Session completed.
 ```
 
 as we can see, we retreived the weak password of the user `nagy` which is also `nagy`
+
+---
+> For more questions email: nagy@aast.edu

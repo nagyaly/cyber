@@ -28,3 +28,7 @@ hping in flood mode, no replies will be shown
 3434550 packets transmitted, 0 packets received, 100% packet loss
 round-trip min/avg/max = 0.0/0.0/0.0 ms
 ```
+
+
+---
+> For more questions email: nagy@aast.edu
