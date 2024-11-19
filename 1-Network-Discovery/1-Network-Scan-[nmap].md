@@ -1,5 +1,5 @@
 # Network Scan using [nmap]
-<img src="https://www.kali.org/tools/nmap/images/nmap-logo.svg" style="width:120px;"/>
+<img src="https://www.kali.org/tools/nmap/images/nmap-logo.svg" style="width:80px;"/>
 
 Nmap is a network scanner created by Gordon Lyon. and used to discover hosts and services on a computer network by sending packets and analyzing the responses.
 

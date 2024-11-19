@@ -2,6 +2,7 @@
 ### Cyber Security ![](https://img.shields.io/badge/Semester-Fall--2024-black)
 
 ### This Course is Conducted By:
+- _Dr. Sanaa Taha_ staha@adj.aast.edu
 - _Eng. Nagy K. Aly_ nagy@aast.edu
 ---
 
