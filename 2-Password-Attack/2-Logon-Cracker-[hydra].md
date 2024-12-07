@@ -41,17 +41,17 @@ In certain cases we dont know the user name, we can specify a list with possible
 ### 4- Fix wide range compatability problem
 In many cases hydra produce this error because the target machine uses legacy key exchange algorithms.
 
-`
+```
 [ERROR] could not connect to ssh://192.160.70.22:22 - kex error : no match for method server host key algo: server [ssh-rsa,ssh-dss], client [ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256]
-`
+```
 
 We have to enable the ssh wide compatability mode in kali:
 
-- in terminal run `sudo kali-tweaks`
-- select `Hardening`
-- go down with keys and tick `SSH Client` by pressing the space bar, then select apply.
-- in terminal type `sudo systemctl restart sshd` 
-- run the Hydra attack, should work now
+- In terminal run `sudo kali-tweaks`
+- Select `Hardening`
+- Navigate down with keys and tick `SSH Client` by pressing the space bar, then select apply.
+- In terminal type `sudo systemctl restart sshd` 
+- Run the Hydra attack, should work now
 
 ---
 > For more questions email: nagy@aast.edu
