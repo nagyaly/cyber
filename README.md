@@ -4,7 +4,7 @@
 ### This Course is Conducted By:
 
 - _Dr. Sanaa Taha_ staha@adj.aast.edu
-- &nbsp; _Eng. Nagy K. Aly_ nagy@aast.edu <img align="left" src="https://i.ibb.co/tcQzv0J/pngwing-com.png" style="width:22px;"/>
+- _Eng. Nagy K. Aly_ nagy@aast.edu <img align="left" src="https://i.ibb.co/tcQzv0J/pngwing-com.png" style="width:22px;"/>
 
 ---
 
