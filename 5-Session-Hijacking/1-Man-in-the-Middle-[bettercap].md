@@ -10,6 +10,8 @@ bettercap is a powerful, easily extensible and portable framework written in Go 
 
 make sure bettercap is install, otherwise run `sudo apt install bettercap`
 
+you may need to enable IP Forwarding, to allow Kali machine to act as a gateway `echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward`
+
 ---
 
 ### 1- Launch bettercap
