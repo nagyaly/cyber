@@ -31,22 +31,22 @@ it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads sp
 ! Answer with no, otherwise the attack will take a very long time.
 ```
 
-```markdown
+```diff
 for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] 
 
-#Answer with yes
+! Answer with yes
 ```
-```markdown
+```diff
 GET parameter 'id' is vulnerable. Do you want to keep testing the others (if any)? [y/N] 
 
-#Answer with no, anyway you may specify the paremeters with -p option for example -p "id"
+! Answer with no, anyway you may specify the paremeters with -p option for example -p "id"
 ```
 
 
-```markdown
+```diff
 [15:32:28] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/192.168.70.6'
 
-#The result will be saved to local directory, and any previous attack on the same url will continue on the previous attack. otherwise you may reset the attack by deleting the directory sudo rm "/root/.local/share/sqlmap/output/192.168.70.6"
+! The result will be saved to local directory, and any previous attack on the same url will continue on the previous attack. otherwise you may reset the attack by deleting the directory sudo rm "/root/.local/share/sqlmap/output/192.168.70.6"
 ```
 
 ---
@@ -195,31 +195,32 @@ sqlmap \
 - `--dump` dump all data
 
 sqlmap with prompt multiple question, you should answer as follow
-```markdown
+```diff
 do you want to store hashes to a temporary file for eventual further processing with other tools [y/N]
  
-#Answer with no
+! Answer with no
 ```
 
-```markdown
+```diff
 do you want to crack them via a dictionary-based attack? [Y/n/q] 
 
-#Answer with yes if you want to crack passwords.
+! Answer with yes if you want to crack passwords.
 ```
 
-```
+```diff
 [15:42:01] [INFO] using hash method 'md5_generic_passwd'
 what dictionary do you want to use?
 [1] default dictionary file '/usr/share/sqlmap/data/txt/wordlist.tx_' (press Enter)
 [2] custom dictionary file
 [3] file with list of dictionary files
-```
-as you can see the hashing algorithm is detected "md5_generic_passwd", select the genric wordlist [1] or specify a custom dictionary file.
 
-```markdown
+! as you can see the hashing algorithm is detected "md5_generic_passwd", select the genric wordlist [1] or specify a custom dictionary file.
+```
+
+```diff
 do you want to use common password suffixes? (slow!) [y/N]
 
-# Answer with no
+! Answer with no
 ```
 
 
