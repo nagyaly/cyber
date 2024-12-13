@@ -25,10 +25,10 @@ sqlmap \
 sqlmap with prompt multiple question, you should answer as follow
 
 
-```markdown
+```diff
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]
 
-#Answer with no, otherwise the attack will take a very long time.
+! Answer with no, otherwise the attack will take a very long time.
 ```
 
 ```markdown
