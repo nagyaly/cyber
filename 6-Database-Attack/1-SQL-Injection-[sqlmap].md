@@ -29,7 +29,7 @@ sqlmap \
 ```markdown
 it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n]
 ```
-<yellow>Answer with no, otherwise the attack will take a very long time.</yellow>
+<span style="color: gold">Answer with no, otherwise the attack will take a very long time.</span>
 
 ```markdown
 for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] 
