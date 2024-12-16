@@ -18,7 +18,7 @@
 | 2 | Password Attack | Generate wordlist using crunch, crack logong using hydra, Password Attack using john the ripper and #hashcat# |
 | 3 | Denial of Service | Exhaust resources of target machine by sending large amount of requests using hping3 and metasploit |
 | 4 | Exploitation | creating backdoor payload using venom and access the target machine using metasploit |
-| 5 | Session Hijacking | Intercepting HTTP traffic and DNS spoofing using bettercap, bypassing HTTPS using hstshijack |
+| 5 | Session Hijacking | Intercepting HTTP traffic and DNS poisoning using bettercap, bypassing HTTPS using hstshijack |
 | 6 | Database Attack | SQL Injection using sqlmap |
 
 
