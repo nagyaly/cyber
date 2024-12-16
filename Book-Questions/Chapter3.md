@@ -18,7 +18,8 @@ output of $S_1$ for several pairs of inputs.
 Show that $S_1(x_1) \oplus S_1(x_2) \neq S1(x_1 \oplus x_2)$ where "$\oplus$" denotes bitwise XOR, for:
 1. $x_1 = 000000, x_2 = 000001$
 
-$S_1(000000) = (14)_{10} = (1110)_{2}$ \
+$S_1(000000) = (14)_{10} = (1110)_{2}$
+
 $S_1(000001) = (00)_{10} = (0000)_{2}$ \
 $1110 \oplus 0000 = 1110$ then $S_1(000000) \oplus S_1(000001) = 1110$ \
 while $000000 \oplus 000001 = 000001$ and $S_1(000001) = (00)_{10} = (0000)_{2}$ \
