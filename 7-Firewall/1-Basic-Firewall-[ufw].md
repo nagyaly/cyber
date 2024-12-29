@@ -17,9 +17,6 @@ UFW (Uncomplicated Firewall) is a user-friendly command-line interface for manag
 Status: inactive
 ```
 
-$\color{#D29922}\textsf{Warning}$ 
-
-<span style="color:green">or if the firewall is active</span>
 ```bash
 Status: active
 
@@ -32,8 +29,8 @@ Bind9 (v6)                 ALLOW       Anywhere (v6)
 ### 2- enable ufw
 `sudo ufw enable`
 
-you may prompt with the following if you are connected via ssh, just reply with yes (y) \
-**Command may disrupt existing ssh connections. Proceed with operation (y|n)?**
+> [!TIP]  you may prompt with the following if you are connected via ssh, just reply with yes (y)
+> Command may disrupt existing ssh connections. Proceed with operation (y|n)?
 
 ```bash
 Firewall is active and enabled on system startup
