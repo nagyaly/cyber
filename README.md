@@ -20,6 +20,7 @@
 | 4 | Exploitation | creating backdoor payload using venom and access the target machine using metasploit |
 | 5 | Session Hijacking | Intercepting HTTP traffic and DNS poisoning using bettercap, bypassing HTTPS using hstshijack |
 | 6 | Database Attack | SQL Injection using sqlmap |
+| 7 | Firewall | iptables & ufw |
 
 
 ---
