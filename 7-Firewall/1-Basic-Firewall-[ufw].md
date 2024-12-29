@@ -29,7 +29,8 @@ Bind9 (v6)                 ALLOW       Anywhere (v6)
 ### 2- enable ufw
 `sudo ufw enable`
 
-> [!NOTE]  you may prompt with the following if you are connected via ssh, just reply with yes (y)
+
+>[!NOTE]  you may prompt with the following if you are connected via ssh, just reply with yes (y)
 > Command may disrupt existing ssh connections. Proceed with operation (y|n)?
 
 ```bash
