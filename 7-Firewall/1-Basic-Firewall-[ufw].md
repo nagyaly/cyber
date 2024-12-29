@@ -28,7 +28,8 @@ Bind9 (v6)                 ALLOW       Anywhere (v6)
 ```
 ------------------------------------------------------------------------------
 ### 2- Enable/disable the firewall
-`sudo ufw enable`
+to enable `sudo ufw enable` \
+to disable `sudo ufw disable`
 
 >[!NOTE]
 >$\color{#4492f8}\textsf{You may prompt with the following if you are connected via ssh, just reply with yes (y)}$\
@@ -76,8 +77,17 @@ Firewall is active and enabled on system startup
 - Block all incoming connection from the host on the interface `eth0` \
 `sudo ufw deny in on eth0 from 192.160.70.5`
 
+- Allow incoming connection from the host `192.160.70.5` to port `22` \
+`sudo ufw allow from 192.160.70.5 to any port 22`
+
 - Allow incoming connection from the host `192.160.70.5` to port `22` with protocol `tcp` \
 `sudo ufw allow from 192.160.70.5 proto tcp to any port 22`
+
+- Allow incoming connection from any host on port `80` and `443` with protocol `tcp` \
+`sudo ufw allow proto tcp from any to any port 80,443`
+
+- Block outgoing connections on port 25 (SMTP Mail) \
+`sudo ufw deny out 25`
 
 
 ------------------------------------------------------------------------------
@@ -93,7 +103,7 @@ Anywhere                   DENY        192.160.70.5
 ```
 
 ------------------------------------------------------------------------------
-### 8- Delete a rule
+### 6- Delete a rule
 you can delete a specific rule by doing the following
 
 `sudo ufw delete allow from 192.160.70.5`
@@ -110,6 +120,23 @@ Status: active
 ```
 
 and delete by index `sudo ufw delete 2`
+
+------------------------------------------------------------------------------
+### 7- Application Profile
+
+Applications that rely on network communications will typically set up a UFW profile such as ssh or nginx web server
+
+To list available application profile `sudo ufw app list`
+```bash
+Available applications:
+  Bind9
+  Nginx HTTP
+  OpenSSH
+```
+
+To enable a specific profile `sudo ufw allow OpenSSH`
+
+Profile rule can be deleted same as regular rules `sudo ufw delete allow OpenSSH`
 
 ------------------------------------------------------------------------------
 > For more questions email: nagy@aast.edu
