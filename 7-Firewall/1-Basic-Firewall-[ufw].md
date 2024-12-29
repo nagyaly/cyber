@@ -17,7 +17,7 @@ UFW (Uncomplicated Firewall) is a user-friendly command-line interface for manag
 Status: inactive
 ```
 
-$\color{#D29922}\textsf{\Large\&#x26A0;\kern{0.2cm}\normalsize Warning}$ 
+$\color{#D29922}\textsf{Warning}$ 
 
 <span style="color:green">or if the firewall is active</span>
 ```bash
