@@ -5,12 +5,12 @@
 UFW (Uncomplicated Firewall) is a user-friendly command-line interface for managing the Linux firewall. It simplifies the configuration of iptables, making it easier for users to define rules for allowing or blocking network traffic based on source/destination addresses, ports, and protocols.
 
 
----
+------------------------------------------------------------------------------
 ### 1- install ufw on debian based linux
 
 `sudo apt install -y ufw`
 
----
+------------------------------------------------------------------------------
 ### 2- check ufw state
 `sudo ufw status`
 
@@ -26,7 +26,7 @@ To                         Action      From
 Bind9                      ALLOW       Anywhere
 Bind9 (v6)                 ALLOW       Anywhere (v6)
 ```
----
+------------------------------------------------------------------------------
 ### 2- Enable/disable the firewall
 `sudo ufw enable`
 
@@ -38,34 +38,50 @@ Bind9 (v6)                 ALLOW       Anywhere (v6)
 Firewall is active and enabled on system startup
 ```
 
----
-### 3- Specify Direction
-you may used the firewall to allow/deny specific connection ingoing `IN` or outgoing `to` specific hosts or subnet.
+------------------------------------------------------------------------------
+### 3- ufw parameters
 
-the following will block all incoming connection from the host `192.160.70.5`
-`sudo ufw deny from 192.160.70.5`
+- Direction:
+  + `from`      ingoing
+  + `to`      outgoing
 
----
-### 4- block a subnet
-The following command will block all incoming connections from the entire subnet
+- Target:
+  + `allow`     allow connection
+  + `deny`      drop the packets
+  + `reject`    reject the packet (the user get notified)
+  + `limit`     allow but limit the rate to 6 connections per 30 seconds (to avoid logon brute force)
 
-`sudo ufw deny from 192.160.70.0/24`
+- Protocol
+  + `proto tcp`
+  + `proto udp`
 
----
-### 5- enable a host
-The following command will enable the connections from the specified host
+- Protocol
+  + `proto tcp`
+  + `proto udp`
 
+- Interface
+  + `in on eth0` specify the interface eth0
+
+------------------------------------------------------------------------------
+### 4- Basic Examples
+- Block all incoming connection from the host `192.160.70.5` \
+  `sudo ufw deny from 192.160.70.5`
+
+- Block all incoming connections from the entire subnet \
+  `sudo ufw deny from 192.160.70.0/24`
+
+- Enable the connections from the specified host \
 `sudo ufw allow from 192.160.70.5`
 
----
-### 6- specify the network interface
-
-the following will block all incoming connection from the host on the interface `eth0`
-
+- Block all incoming connection from the host on the interface `eth0` \
 `sudo ufw deny in on eth0 from 192.160.70.5`
 
----
-### 7- list all rules
+- Allow incoming connection from the host `192.160.70.5` to port `22` with protocol `tcp` \
+`sudo ufw allow from 192.160.70.5 proto tcp to any port 22`
+
+
+------------------------------------------------------------------------------
+### 5- list all rules
 `sudo ufw status`
 ```bash
 Output
@@ -76,7 +92,7 @@ To                         Action      From
 Anywhere                   DENY        192.160.70.5
 ```
 
----
+------------------------------------------------------------------------------
 ### 8- Delete a rule
 you can delete a specific rule by doing the following
 
@@ -94,3 +110,6 @@ Status: active
 ```
 
 and delete by index `sudo ufw delete 2`
+
+------------------------------------------------------------------------------
+> For more questions email: nagy@aast.edu
