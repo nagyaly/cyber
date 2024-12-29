@@ -32,11 +32,7 @@ Bind9 (v6)                 ALLOW       Anywhere (v6)
 
 >[!TIP]
 >you may prompt with the following if you are connected via ssh, just reply with yes (y)
->Command may disrupt existing ssh connections. Proceed with operation (y|n)?
-
->[!TIP] a
->you may prompt with the following if you are connected via ssh, just reply with yes (y)
->Command may disrupt existing ssh connections. Proceed with operation (y|n)?
+>`Command may disrupt existing ssh connections. Proceed with operation (y|n)?`
 
 ```bash
 Firewall is active and enabled on system startup
