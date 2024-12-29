@@ -32,7 +32,7 @@ Bind9 (v6)                 ALLOW       Anywhere (v6)
 
 
 >[!NOTE]
->$\color{#1773d6}\textsf{You may prompt with the following if you are connected via ssh, just reply with yes (y)}$
+>$\color{#4686cf}\textsf{You may prompt with the following if you are connected via ssh, just reply with yes (y)}$\
 >Command may disrupt existing ssh connections. Proceed with operation (y|n)?
 
 ```bash
