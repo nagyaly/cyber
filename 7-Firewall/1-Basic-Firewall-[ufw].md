@@ -8,7 +8,10 @@ UFW (Uncomplicated Firewall) is a user-friendly command-line interface for manag
 ------------------------------------------------------------------------------
 ### 1- install ufw on debian based linux
 
-`sudo apt install -y ufw`
+`sudo apt-get install -y ufw`
+
+>[!NOTE]
+>You may need to run `sudo apt-get update` before the installation
 
 ------------------------------------------------------------------------------
 ### 2- check ufw state
@@ -38,6 +41,9 @@ to disable `sudo ufw disable`
 ```bash
 Firewall is active and enabled on system startup
 ```
+
+>[!WARNING]
+>If you are over ssh, make sure to allow ssh over port 22 before enabling the firewall, or you will lose access to the machine. 
 
 ------------------------------------------------------------------------------
 ### 3- ufw parameters
@@ -108,7 +114,9 @@ you can delete a specific rule by doing the following
 
 `sudo ufw delete allow from 192.160.70.5`
 
-or by index, you can list all the rules with index using `sudo ufw status numbered`
+
+>[!WARNING]
+>in ufw **version >= 0.3** you can delete rules by index, you can list all the rules with index using `sudo ufw status numbered`
 ```bash
 Output
 Status: active
@@ -119,7 +127,10 @@ Status: active
 [2] Anywhere                ALLOW IN    192.160.70.5
 ```
 
-and delete by index `sudo ufw delete 2`
+and then delete by index `sudo ufw delete 2`
+
+>[!WARNING]
+>also in ufw **version >= 0.3** you can delete all rules by `sudo ufw reset` then enabling the firewall again `sudo ufw enable`
 
 ------------------------------------------------------------------------------
 ### 7- Application Profile
