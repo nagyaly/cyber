@@ -43,7 +43,7 @@ Firewall is active and enabled on system startup
 ```
 
 >[!WARNING]
->If you are over ssh, make sure to allow ssh over port 22 before enabling the firewall, or you will lose access to the machine. 
+>$\color{#d29922}\textsf{If you are over ssh, make sure to allow ssh over port 22 before enabling the firewall, or you will lose access to the machine}$
 
 ------------------------------------------------------------------------------
 ### 3- ufw parameters
