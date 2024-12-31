@@ -43,7 +43,8 @@ Firewall is active and enabled on system startup
 ```
 
 >[!WARNING]
->$\color{#d29922}\textsf{If you are over ssh, make sure to allow ssh over port 22 before enabling the firewall, or you will lose access to the machine}$
+>$\color{#d29922}\textsf{If you are over ssh, make sure to allow ssh over port 22 before enabling the firewall.}$
+>$\color{#d29922}\textsf{Or you will lose access to the machine :( }$
 
 ------------------------------------------------------------------------------
 ### 3- ufw parameters
@@ -150,7 +151,7 @@ Available applications:
 
 To enable a specific profile `sudo ufw allow OpenSSH`
 
-Profile rule can be deleted same as regular rules `sudo ufw delete allow OpenSSH`
+Profile rule can be deleted same as regular rules `sudo ufw delete allow OpenSSH` or with index.
 
 ------------------------------------------------------------------------------
 > For more questions email: nagy@aast.edu
