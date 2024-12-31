@@ -1,6 +1,6 @@
 ## Basic Firewall [ufw]
 
-<img src="https://cdn4.iconfinder.com/data/icons/devine_icons/Black/PNG/System%20and%20Internet/Firewall.png" style="width:120px;"/>
+<img src="https://i.ibb.co/z86JkJ9/pngegg.png" style="width:120px;"/>
 
 UFW (Uncomplicated Firewall) is a user-friendly command-line interface for managing the Linux firewall. It simplifies the configuration of iptables, making it easier for users to define rules for allowing or blocking network traffic based on source/destination addresses, ports, and protocols.
 
@@ -48,9 +48,9 @@ Firewall is active and enabled on system startup
 ------------------------------------------------------------------------------
 ### 3- ufw parameters
 
-- Direction:
-  + `from`      ingoing
-  + `to`      outgoing
+```
+sudo ufw <target> <direction> on <interface> proto <protocol> from <source> to <destination> port <port>
+```
 
 - Target:
   + `allow`     allow connection
@@ -58,16 +58,16 @@ Firewall is active and enabled on system startup
   + `reject`    reject the packet (the user get notified)
   + `limit`     allow but limit the rate to 6 connections per 30 seconds (to avoid logon brute force)
 
-- Protocol
-  + `proto tcp`
-  + `proto udp`
+- Direction:
+  + `from`      ingoing
+  + `to`        outgoing
 
 - Protocol
   + `proto tcp`
   + `proto udp`
 
 - Interface
-  + `in on eth0` specify the interface eth0
+  + `on eth0` specify the interface eth0
 
 ------------------------------------------------------------------------------
 ### 4- Basic Examples
@@ -84,13 +84,16 @@ Firewall is active and enabled on system startup
 `sudo ufw deny in on eth0 from 192.160.70.5`
 
 - Allow incoming connection from the host `192.160.70.5` to port `22` \
-`sudo ufw allow from 192.160.70.5 to any port 22`
+`sudo ufw allow from 192.160.70.5 port 22`
 
-- Allow incoming connection from the host `192.160.70.5` to port `22` with protocol `tcp` \
-`sudo ufw allow from 192.160.70.5 proto tcp to any port 22`
+- Limit incoming connection from any host to port `22` \
+`sudo ufw limit from any port 22`
 
-- Allow incoming connection from any host on port `80` and `443` with protocol `tcp` \
-`sudo ufw allow proto tcp from any to any port 80,443`
+- Allow incoming connection from the host `192.160.70.5` to port `22` on protocol `tcp` \
+`sudo ufw allow from 192.160.70.5 proto tcp port 22`
+
+- Allow incoming connection from any host on port `80` and `443` on protocol `tcp` \
+`sudo ufw allow proto tcp from any port 80,443`
 
 - Block outgoing connections on port 25 (SMTP Mail) \
 `sudo ufw deny out 25`
