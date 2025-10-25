@@ -8,7 +8,7 @@ A Man-in-the-Middle (MitM) attack is a type of cyberattack where an attacker sec
 bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an easy to use, all-in-one solution with all the features they might possibly need for performing reconnaissance and attacking WiFi networks, Bluetooth Low Energy devices, wireless HID devices and Ethernet networks.
 
 
-make sure bettercap is install, otherwise run `sudo apt install bettercap`
+make sure bettercap is install, otherwise run `sudo apt update` then `sudo apt install bettercap`
 
 you may need to enable IP Forwarding, to allow Kali machine to act as a gateway `echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward`
 
