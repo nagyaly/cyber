@@ -10,13 +10,13 @@
 !0-Core-Knowledge/2-*
 
 !1-Network-Discovery/
-!1-Network-Discovery/1-Network-Scan-[nmap].md
+!1-Network-Discovery/1-*
 
 !2-Password-Attack/
-!2-Password-Attack/1-Wordlist-Generate-[crunch].md
-!2-Password-Attack/2-Logon-Cracker-[hydra].md
-!2-Password-Attack/3-Weak-Passwords-[john].md
-!2-Password-Attack/4-Password-Recovery-[hashcat].md
+!2-Password-Attack/1-*
+!2-Password-Attack/2-*
+!2-Password-Attack/3-*
+!2-Password-Attack/4-*
 
 !3-Denial-of-Service/
 !3-Denial-of-Service/1-DoS-[hping3].md
