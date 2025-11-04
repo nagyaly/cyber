@@ -6,8 +6,8 @@
 !README.md
 
 !0-Core-Knowledge/
-!0-Core-Knowledge/1-Networks-Basics.md
-!0-Core-Knowledge/2-Enviroment-Setup.md
+!0-Core-Knowledge/1-*
+!0-Core-Knowledge/2-*
 
 !1-Network-Discovery/
 !1-Network-Discovery/1-Network-Scan-[nmap].md
