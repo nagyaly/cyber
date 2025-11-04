@@ -19,22 +19,22 @@
 !2-Password-Attack/4-*
 
 !3-Denial-of-Service/
-!3-Denial-of-Service/1-DoS-[hping3].md
-!3-Denial-of-Service/2-DoS-[metasploit].md
+!3-Denial-of-Service/1-*
+!3-Denial-of-Service/2-*
 
 
 !4-Exploitation/
-!4-Exploitation/1-Backdoor-[metasploit].md
-!4-Exploitation/2-Post-Exploitation-[metasploit].md
+!4-Exploitation/1-*
+!4-Exploitation/2-*
 
 !5-Session-Hijacking/
-!5-Session-Hijacking/1-Man-in-the-Middle-[bettercap].md
+!5-Session-Hijacking/1-*
 
 !6-Database-Attack/
-!6-Database-Attack/1-SQL-Injection-[sqlmap].md
+!6-Database-Attack/1-*
 
 !7-Firewall/
-!7-Firewall/1-Basic-Firewall-[ufw].md
+!7-Firewall/1-*
 
 !Book-Questions/
 !Book-Questions/**
